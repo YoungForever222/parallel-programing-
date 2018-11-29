@@ -15,6 +15,7 @@ contains
         call MPI_INIT( mpicode )
         call MPI_COMM_RANK( MPI_COMM_WORLD, mpirank, mpicode )
         call MPI_COMM_SIZE( MPI_COMM_WORLD, mpisize, mpicode )
+        if(mpirank .eq. Master) root = .true.
     end subroutine
     subroutine check_parallel()
         p = mpisize
@@ -33,5 +34,6 @@ contains
     end subroutine
     subroutine end_parallel()
         call MPI_FINALIZE(mpicode)
+        stop
     end subroutine
 end module
