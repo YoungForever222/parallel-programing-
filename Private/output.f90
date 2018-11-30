@@ -75,7 +75,7 @@ subroutine field_output()
         write(idfile) 0,-1
         do  x=1, xDim
             do  y=1, yDim
-                write(idfile) real(x*dx),real(y*dy),real(p_all(y,x)), &
+                    write(idfile) real(x*dx),real(y*dy),real(p_all(y,x)), &
                             real(u_all(y,x)),real(v_all(y,x)),real(vor(y,x))
             enddo
         enddo

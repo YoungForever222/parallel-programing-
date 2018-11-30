@@ -2,15 +2,15 @@ module aVariables
     USE aparallel
     !Parameters
     implicit none
-    integer,parameter :: xDim = 256 , yDim = 256
-    integer,parameter :: nt = 20
-    integer,parameter :: nit= 10
-    integer,parameter :: ntout = 2
+    integer,parameter :: xDim = 200 , yDim = 200
+    integer,parameter :: nt = 1000000
+    integer,parameter :: nit= 50
+    integer,parameter :: ntout = 100000
     integer,parameter :: c  = 1
     real(8),parameter :: Lref = 2.d0
     real(8),parameter :: dx = Lref / (xDim + 1)
     real(8),parameter :: dy = Lref / (yDim + 1)
-    real(8),parameter :: rho = 1.d0, nu = .1d0, dt = 1e-3
+    real(8),parameter :: rho = 1.d0, nu = .1d0, dt = 1e-5
     !Variables
     integer :: nx , ny
     real(8),allocatable,dimension(:,:):: u_all,v_all,p_all,vor

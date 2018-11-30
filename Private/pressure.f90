@@ -50,5 +50,5 @@ subroutine build_up_b()
                     -.25d0/dy/dy*(vn(j+1,i)-vn(j-1,i))**2
         end do
     end do
-    b(:,:) = .5d0*rho*dx*dx*dy*dy/(dx*dx+dy*dy)*b(j,i)
+    b(:,:) = .5d0*rho*dx*dx*dy*dy/(dx*dx+dy*dy)*b(:,:)
 end subroutine
