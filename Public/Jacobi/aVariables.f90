@@ -94,7 +94,7 @@ contains
             write(6,*) "Ax = b"
             write(6,*) "A"
             do i = 1,n_real
-                write(6,*) A(i,:)
+                write(6,*) A(i,1:n_real)
             end do
             write(6,*) "b"
             do i = 1,n_real
